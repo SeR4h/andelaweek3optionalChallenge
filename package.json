@@ -1,0 +1,23 @@
+{
+  "name": "andelaweek3optionalChallenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeR4h/andelaweek3optionalChallenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeR4h/andelaweek3optionalChallenge/issues"
+  },
+  "homepage": "https://github.com/SeR4h/andelaweek3optionalChallenge#readme",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}
