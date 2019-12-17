@@ -1,25 +1,23 @@
 function findMissingNumbers(inputArray) {
-
     var missingNumbers = [];
-    if (typeof inputArray === 'string') {
-        return 'invalid input'
+    if (!Array.isArray(inputArray)) {
+        // used return for testing since thrown error couldnt be seen by the test
+        return 'Invalid Input'
     }
     if (inputArray.length <= 1) {
         return 'array length too small'
     }
-    inputArray = inputArray.sort()
-    var i = 1
-    var missingValue = inputArray[0] + 1;
-    const count = ((inputArray[inputArray.length - 1]) - missingValue) - (inputArray.length - 2);
-    while (missingNumbers.length < count) {
-        while (inputArray[i] !== missingValue) {
-            missingNumbers.push(missingValue++)
+    inputArray.sort((a, b) => a - b)
+    for (var i = 1; i < inputArray.length; i++) {
+        if (inputArray[i] - inputArray[i - 1] != 1) {
+            var valDifference = inputArray[i] - inputArray[i - 1];
+            var j = 1
+            while (j < valDifference) {
+                missingNumbers.push(inputArray[i - 1] + j)
+                j++
+            }
         }
-        i++;
-        missingValue++;
     }
     return missingNumbers;
 }
-/*var ar = [ 4,9,1 ];
-findMissingNumbers(ar)*/
 module.exports = findMissingNumbers;

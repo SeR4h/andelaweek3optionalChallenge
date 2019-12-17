@@ -6,13 +6,13 @@ test('returns array length too small', () => {
 });
 
 test('It does not accept strings as input', () => {
-    expect(findMissingNumbers('string')).toEqual('invalid input');
+    expect(findMissingNumbers('string')).toEqual('Invalid Input');
 });
 
 test('It finds the missing numbers from an array', () => {
     expect(
-        findMissingNumbers([1, 2, 3, 5, 6, 7, 9])
+        findMissingNumbers([4, 9, -5, 4, 1, -2, 1])
     ).toEqual(
-        [4, 8]
+        [-4, -3, -1, 0, 2, 3, 5, 6, 7, 8]
     );
 });
