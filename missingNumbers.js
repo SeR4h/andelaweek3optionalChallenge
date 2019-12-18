@@ -1,11 +1,10 @@
 function findMissingNumbers(inputArray) {
     var missingNumbers = [];
     if (!Array.isArray(inputArray)) {
-        // used return for testing since thrown error couldnt be seen by the test
-        return 'Invalid Input'
+                throw new Error('Invalid Input');
     }
     if (inputArray.length <= 1) {
-        return 'array length too small'
+        throw new Error('array length too small');
     }
     inputArray.sort((a, b) => a - b)
     for (var i = 1; i < inputArray.length; i++) {

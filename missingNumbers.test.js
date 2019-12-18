@@ -1,12 +1,11 @@
 const findMissingNumbers = require('./missingNumbers');
 
 test('returns array length too small', () => {
-    expect(findMissingNumbers([1])).toEqual
-        ('array length too small')
+    expect(() => { findMissingNumbers([1]) }).toThrowError('array length too small');
 });
 
 test('It does not accept strings as input', () => {
-    expect(findMissingNumbers('string')).toEqual('Invalid Input');
+    expect(() => { findMissingNumbers('string') }).toThrowError('Invalid Input');
 });
 
 test('It finds the missing numbers from an array', () => {
