@@ -9,10 +9,8 @@ function findMissingNumbers(inputArray) {
     inputArray.sort((a, b) => a - b)
     for (var i = 1; i < inputArray.length; i++) {
         var valDifference = inputArray[i] - inputArray[i - 1];
-        if (valDifference > 1) {            
-            for (var j = 1; j < valDifference; j++) {
-                missingNumbers.push(inputArray[i - 1] + j)
-            }
+        for (var j = 1; j < valDifference; j++) {
+            missingNumbers.push(inputArray[i - 1] + j)
         }
     }
     return missingNumbers;
